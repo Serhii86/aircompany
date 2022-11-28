@@ -17,44 +17,36 @@ namespace Aircompany.Planes
             _maxLoadCapacity = maxLoadCapacity;
         }
 
-        public string GetModel()
+        public string GetModel
         {
-            return _model;
+            get { return _model; }
         }
 
-        public int GetMS()
+        public int GetMaxSpeed
         {
-            return _maxSpeed;
+            get { return _maxSpeed; }
         }
 
-        public int MAXFlightDistance()
+        public int MaxFlightDistance
         {
-            return _maxFlightDistance;
+            get { return _maxFlightDistance; }
         }
 
-        public int MAXLoadCapacity()
+       public int MaxLoadCapacity
         {
-            return _maxLoadCapacity;
+            get { return _maxLoadCapacity; }
         }
+
 
         public override string ToString()
         {
-            return "Plane{" +
-                "model='" + _model + '\'' +
-                ", maxSpeed=" + _maxSpeed +
-                ", maxFlightDistance=" + _maxFlightDistance +
-                ", maxLoadCapacity=" + _maxLoadCapacity +
-                '}';
+            return "Plane{" + "model='" + _model + '\'' + ", maxSpeed=" + _maxSpeed + ", maxFlightDistance=" + _maxFlightDistance + ", maxLoadCapacity=" + _maxLoadCapacity + '}';
         }
 
         public override bool Equals(object obj)
         {
             var plane = obj as Plane;
-            return plane != null &&
-                   _model == plane._model &&
-                   _maxSpeed == plane._maxSpeed &&
-                   _maxFlightDistance == plane._maxFlightDistance &&
-                   _maxLoadCapacity == plane._maxLoadCapacity;
+            return plane != null && _model == plane._model && _maxSpeed == plane._maxSpeed && _maxFlightDistance == plane._maxFlightDistance && _maxLoadCapacity == plane._maxLoadCapacity;
         }
 
         public override int GetHashCode()

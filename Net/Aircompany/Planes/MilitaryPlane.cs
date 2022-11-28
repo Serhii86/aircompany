@@ -6,8 +6,7 @@ namespace Aircompany.Planes
     {
         public MilitaryType _type;
 
-        public MilitaryPlane(string model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type)
-            : base(model, maxSpeed, maxFlightDistance, maxLoadCapacity)
+        public MilitaryPlane(string model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type) : base(model, maxSpeed, maxFlightDistance, maxLoadCapacity)
         {
             _type = type;
         }
@@ -15,9 +14,7 @@ namespace Aircompany.Planes
         public override bool Equals(object obj)
         {
             var plane = obj as MilitaryPlane;
-            return plane != null &&
-                   base.Equals(obj) &&
-                   _type == plane._type;
+            return plane != null && base.Equals(obj) && _type == plane._type;
         }
 
         public override int GetHashCode()
@@ -36,9 +33,7 @@ namespace Aircompany.Planes
 
         public override string ToString()
         {
-            return base.ToString().Replace("}",
-                    ", type=" + _type +
-                    '}');
+            return base.ToString().Replace("}", ", type=" + _type + '}');
         }        
     }
 }
